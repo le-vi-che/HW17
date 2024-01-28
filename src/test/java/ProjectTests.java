@@ -52,7 +52,6 @@ public class ProjectTests  extends TestBase{
 
     @Test
     @DisplayName("Проверка наличия вакансий IT и DGTL")
-
     void checkCareerChapterTest(){
         open("https://www.raiffeisen.ru/");
         $("[data-marker='LinkList.LinkListNav']").$(byText("О банке")).click();
@@ -61,5 +60,13 @@ public class ProjectTests  extends TestBase{
         $(".vacancies-0-2-95").$$("[target='_blank']").shouldHave(size(0));
     }
 
-
+    @Test
+    @DisplayName("Поиск вакансии QA")
+    void searchQaVacancyTest(){
+        open("https://www.raiffeisen.ru/about/");
+        $("[data-marker='StoryIconBlockItem.Grid.Col']", 1).click();
+        $(".tabs-0-2-6").$(byText("Вакансии")).click();
+        $("[placeholder='Поиcк']").setValue("QA");
+        $("[target='_blank']").shouldHave(text("QA"));
+    }
 }
