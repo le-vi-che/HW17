@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.MainRaifPage;
 import pages.VacancyRaifPage;
@@ -14,6 +15,7 @@ public class ProjectTests  extends TestBase{
     MainRaifPage mainPage  = new MainRaifPage();
     VacancyRaifPage vacancyPage = new VacancyRaifPage();
     @Test
+    @Tag("raif")
     @DisplayName("Проверка разделов в меню")
     void checkMenuContentTest(){
         mainPage.openPage()
@@ -22,6 +24,7 @@ public class ProjectTests  extends TestBase{
     }
 
 @Test
+@Tag("raif")
 @DisplayName("Проверка ссылок на app Store")
     void checkLinkToAppTest(){
     mainPage.openPage()
@@ -30,6 +33,7 @@ public class ProjectTests  extends TestBase{
 
 
     @Test
+    @Tag("raif")
     @DisplayName("Проверка открытия чата")
 
     void checkOpenChatTest(){
@@ -39,6 +43,7 @@ public class ProjectTests  extends TestBase{
     }
 
     @Test
+    @Tag("raif")
     @DisplayName("Проверка наличия кнопки Подать заявку в разделе Ипотека")
 
     void checkIpotekaButton(){
@@ -48,6 +53,7 @@ public class ProjectTests  extends TestBase{
     }
 
     @Test
+    @Tag("raif")
     @DisplayName("Проверка наличия вакансий IT и DGTL")
     void checkCareerChapterTest(){
         mainPage.openPage()
@@ -57,6 +63,7 @@ public class ProjectTests  extends TestBase{
     }
 
     @Test
+    @Tag("raif")
     @DisplayName("Поиск вакансии QA")
     void searchQaVacancyTest(){
         mainPage.openPage()

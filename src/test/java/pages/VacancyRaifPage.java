@@ -11,6 +11,8 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class VacancyRaifPage {
 
+    public String prof = "QA";
+
     private  SelenideElement itChapter =  $(".tabs-0-2-6").$(byText("IT и DGTL"));
     private  SelenideElement vacancyChapter = $(".tabs-0-2-6").$(byText("Вакансии"));
     private  SelenideElement searchField = $("[placeholder='Поиcк']");
@@ -38,13 +40,13 @@ public class VacancyRaifPage {
 
     @Step("Вводим параметры поиска")
     public VacancyRaifPage inputQAtoFilter() {
-        searchField.setValue("QA");
+        searchField.setValue(prof);
         return this;
     }
 
     @Step("Проверяем, что вакансии есть")
     public VacancyRaifPage checkQaVacancy() {
-        resultField.shouldHave(text("QA"));
+        resultField.shouldHave(text(prof));
         return this;
     }
 }

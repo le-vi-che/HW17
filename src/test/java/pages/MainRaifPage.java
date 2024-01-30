@@ -25,7 +25,7 @@ public class MainRaifPage {
     private SelenideElement aboutButton = $("[data-marker='LinkList.LinkListNav']").$(byText("О банке"));
     private SelenideElement vacancyPageGoButton = $("[data-marker='StoryIconBlockItem.Grid.Col']", 1);
 
- @Step("Открываем главную страницу")
+    @Step("Открываем главную страницу")
     public MainRaifPage openPage() {
         open("");
         return this;
@@ -74,6 +74,4 @@ public class MainRaifPage {
         vacancyPageGoButton.click();
         return this;
     }
-
-
 }
