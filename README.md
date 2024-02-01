@@ -83,16 +83,16 @@ main -DremoteUrl=${SELENOID_URL}
 * TASK (набор тестов для запуска)
 
 
-## <img src="media/allure-report.png" title="Jenkins" width="4%"/> Сборка в Jenkins
+## Сборка в Jenkins
 <p align="center">
-<img title="Jenkins Build" src="media/screens/JenkinsBuild.png">
+<img title="allure-report" src="media/allure-report.png">
 </p>
 
-## <img src="media/logo/Allure_Report.svg" title="Allure Report" width="4%"/> Пример Allure-отчета
+##  Пример Allure-отчета
 ### Overview
-
+В отчете отображены пройденные автотесты
 <p align="center">
-<img title="Allure Overview" src="media/screens/allureReport.png">
+<img title="Allure Overview" src="media/allure-report.png">
 </p>
 
 ### Результат выполнения теста
