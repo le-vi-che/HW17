@@ -90,15 +90,9 @@ main -DremoteUrl=${SELENOID_URL}
 
 ##  Пример Allure-отчета
 ### Overview
-В отчете отображены пройденные автотесты
+В отчете отображены пройденные автотесты. На приложенном изображении открыт тестк кейс, отображены его шаги, прикреплены логи, скрины и видео
 <p align="center">
 <img title="Allure Overview" src="media/allure-report.png">
-</p>
-
-### Результат выполнения теста
-
-<p align="center">
-<img title="Test Results in Alure" src="media/screens/ResultTest.png">
 </p>
 
 ## <img src="media/logo/AllureTestOps.svg" title="Allure TestOps" width="4%"/> Интеграция с Allure TestOps
