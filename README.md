@@ -83,29 +83,29 @@ main -DremoteUrl=${SELENOID_URL}
 * TASK (набор тестов для запуска)
 
 
-## Сборка в Jenkins
+## <img src="media/jenkins.svg" title="Allure TestOps" width="4%"/> Сборка в Jenkins
 <p align="center">
 <img title="allure-report" src="media/allure-report.png">
 </p>
 
-##  Пример Allure-отчета
+## <img src="media/allure.svg" title="Allure TestOps" width="4%"/> Пример Allure-отчета
 ### Overview
 В отчете отображены пройденные автотесты. На приложенном изображении открыт тестк кейс, отображены его шаги, прикреплены логи, скрины и видео
 <p align="center">
 <img title="Allure Overview" src="media/allure-report.png">
 </p>
 
-## <img src="media/logo/AllureTestOps.svg" title="Allure TestOps" width="4%"/> Интеграция с Allure TestOps
+## Интеграция с Allure TestOps
 
 Выполнена интеграция сборки <code>Jenkins</code> с <code>Allure TestOps</code>.
 Результат выполнения автотестов отображается в <code>Allure TestOps</code>
 На Dashboard в <code>Allure TestOps</code> отображена статистика пройденных тестов.
 
 <p align="center">
-<img title="Allure TestOps DashBoard" src="media/screens/allureAutotestCloud.png">
+<img title="Allure TestOps DashBoard" src="media/allureTestOps.png">
 </p>
 
-##  Интеграция с Jira
+## <img src="media/Jira.svg" title="Allure TestOps" width="4%"/> Интеграция с Jira
 
 Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>, в тикете отображается информация, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
 
@@ -113,7 +113,7 @@ main -DremoteUrl=${SELENOID_URL}
 <img title="Jira Task" src="media/jiraTask.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
+## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/telegram.svg"> Уведомления в Telegram с использованием бота
 
 После завершения сборки, бот созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
 
