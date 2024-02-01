@@ -1,0 +1,7 @@
+6980135672:AAGyy_4wzrDaSryD8y1Kg38oeiIE-Qpmh3M
+
+https://api.telegram.org/bot6980135672:AAGyy_4wzrDaSryD8y1Kg38oeiIE-Qpmh3M/getUpdates
+
+-1002138403190
+
+curl -X POST \ -H 'Content-Type: application/json' \-d '{"chat_id": "-1002138403190", "text": "This is a test from mysela", "disable_notification": true}' \https://api.telegram.org/bot6980135672:AAGyy_4wzrDaSryD8y1Kg38oeiIE-Qpmh3M/sendMessage

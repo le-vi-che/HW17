@@ -1,0 +1,17 @@
+{
+  "base": {
+    "project": "some project",
+    "environment": "some env",
+    "comment": "some comment @leviem888",
+    "reportLink": "https://jenkins.autotests.cloud/job/emonovaev_project/10/",
+    "language": "ru",
+    "messenger": "telegram",
+    "allureFolder": "build/allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "6980135672:AAGyy_4wzrDaSryD8y1Kg38oeiIE-Qpmh3M",
+    "chat": "-1002138403190",
+    "replyTo": ""
+  }
+}
