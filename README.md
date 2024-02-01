@@ -125,6 +125,6 @@ main -DremoteUrl=${SELENOID_URL}
 
 К каждому тесту в отчете прилагается видео прогона.
 <p align="center">
-  <img title="Selenoid Video" src="media/screens/video.gif">
+  <img title="Selenoid Video" src="video/videoTest.mp4">
 </p>
 
