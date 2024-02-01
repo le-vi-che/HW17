@@ -83,7 +83,7 @@ main -DremoteUrl=${SELENOID_URL}
 * TASK (набор тестов для запуска)
 
 
-## <img src="media/logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в Jenkins
+## <img src="media/allure-report.png" title="Jenkins" width="4%"/> Сборка в Jenkins
 <p align="center">
 <img title="Jenkins Build" src="media/screens/JenkinsBuild.png">
 </p>
