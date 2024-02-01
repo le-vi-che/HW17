@@ -1,3 +1,4 @@
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -7,7 +8,7 @@ import pages.VacancyRaifPage;
 import java.util.Arrays;
 import java.util.List;
 
-
+@Owner("emonovaev")
 public class ProjectTests  extends TestBase{
 
     final List<String> list = Arrays.asList("Кредиты", "Ипотека","Карты", "Сбережения",
