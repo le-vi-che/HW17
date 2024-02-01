@@ -51,10 +51,20 @@ tasks.withType(Test) {
         }
     }
 }
-
-
-task raif_tests(type: Test) {
+task all_tests(type: Test) {
     useJUnitPlatform {
-        includeTags("raif")
+        includeTags("all-tests")
+    }
+}
+
+task smoke_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags("smoke")
+    }
+}
+
+task regress_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags("regress")
     }
 }

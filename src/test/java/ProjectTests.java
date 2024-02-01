@@ -7,6 +7,7 @@ import pages.VacancyRaifPage;
 import java.util.Arrays;
 import java.util.List;
 
+
 public class ProjectTests  extends TestBase{
 
     final List<String> list = Arrays.asList("Кредиты", "Ипотека","Карты", "Сбережения",
@@ -15,7 +16,7 @@ public class ProjectTests  extends TestBase{
     MainRaifPage mainPage  = new MainRaifPage();
     VacancyRaifPage vacancyPage = new VacancyRaifPage();
     @Test
-    @Tag("raif")
+    @Tag("all-tests")
     @DisplayName("Проверка разделов в меню")
     void checkMenuContentTest(){
         mainPage.openPage()
@@ -24,7 +25,7 @@ public class ProjectTests  extends TestBase{
     }
 
 @Test
-@Tag("raif")
+@Tag("all-tests")
 @DisplayName("Проверка ссылок на app Store")
     void checkLinkToAppTest(){
     mainPage.openPage()
@@ -33,7 +34,7 @@ public class ProjectTests  extends TestBase{
 
 
     @Test
-    @Tag("raif")
+    @Tag("all-tests")
     @DisplayName("Проверка открытия чата")
 
     void checkOpenChatTest(){
@@ -43,7 +44,7 @@ public class ProjectTests  extends TestBase{
     }
 
     @Test
-    @Tag("raif")
+    @Tag("all-tests")
     @DisplayName("Проверка наличия кнопки Подать заявку в разделе Ипотека")
 
     void checkIpotekaButton(){
@@ -53,7 +54,7 @@ public class ProjectTests  extends TestBase{
     }
 
     @Test
-    @Tag("raif")
+    @Tag("all-tests")
     @DisplayName("Проверка наличия вакансий IT и DGTL")
     void checkCareerChapterTest(){
         mainPage.openPage()
@@ -63,7 +64,7 @@ public class ProjectTests  extends TestBase{
     }
 
     @Test
-    @Tag("raif")
+    @Tag("all-tests")
     @DisplayName("Поиск вакансии QA")
     void searchQaVacancyTest(){
         mainPage.openPage()
