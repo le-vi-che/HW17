@@ -1,6 +1,6 @@
 # Compiled class file
 *.class
-notifications
+
 .gradle
 .idea
 build
