@@ -39,13 +39,6 @@ public class MainRaifPage {
         return this;
     }
 
-   // @Step("Переходим в раздел Малому бизнесу")
- //   public MainRaifPage openIpotekaChapter() {
- //       miniBuiss.click();
-//        vtorichkaButton.click();
-  //      return this;
-  //  }
-
     @Step("Проверяем наличия ссылок на app Store")
     public MainRaifPage checkSocialsLinks() {
         linkSearch.shouldHave(size(3));
