@@ -8,6 +8,9 @@ import pages.VacancyRaifPage;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
+
 @Owner("emonovaev")
 public class ProjectTests  extends TestBase{
 
@@ -25,9 +28,8 @@ public class ProjectTests  extends TestBase{
 
     }
 
-@Test
-@Tag("all-tests")
-@DisplayName("Проверка ссылок на app Store")
+    @Tag("all-tests")
+    @DisplayName("Проверка ссылок на app Store")
     void checkLinkToAppTest(){
     mainPage.openPage()
             .checkSocialsLinks();
