@@ -9,36 +9,36 @@ import java.util.Arrays;
 import java.util.List;
 
 @Owner("emonovaev")
-public class ProjectTests  extends TestBase{
+public class ProjectTests  extends TestBase {
 
-    final List<String> list = Arrays.asList("Кредиты", "Ипотека","Карты", "Сбережения",
+    final List<String> list = Arrays.asList("Кредиты", "Ипотека", "Карты", "Сбережения",
             "Инвестиции", "Страхование", "Переводы", "Сервисы", "Про Онлайн-банк", "Ещё...");
 
-    MainRaifPage mainPage  = new MainRaifPage();
+    MainRaifPage mainPage = new MainRaifPage();
     VacancyRaifPage vacancyPage = new VacancyRaifPage();
 
     @Test
     @Tag("all-tests")
     @DisplayName("Проверка разделов в меню")
-    void checkMenuContentTest(){
+    void checkMenuContentTest() {
         mainPage.openPage()
                 .checkMainChapters(list);
 
     }
+
     @Test
     @Tag("all-tests")
     @DisplayName("Проверка ссылок на app Store")
-    void checkLinkToAppTest(){
-    mainPage.openPage()
-            .checkSocialsLinks();
+    void checkLinkToAppTest() {
+        mainPage.openPage()
+                .checkSocialsLinks();
     }
 
 
     @Test
     @Tag("all-tests")
     @DisplayName("Проверка открытия чата")
-
-    void checkOpenChatTest(){
+    void checkOpenChatTest() {
         mainPage.openPage()
                 .openChat()
                 .checkChat();
@@ -47,8 +47,7 @@ public class ProjectTests  extends TestBase{
     @Test
     @Tag("all-tests")
     @DisplayName("Проверка наличия кнопки Подать заявку в разделе Ипотека")
-
-    void checkIpotekaButton(){
+    void checkIpotekaButton() {
         mainPage.openPage()
                 .openIpotekaChapter()
                 .checkIpotekaButton();
@@ -57,7 +56,7 @@ public class ProjectTests  extends TestBase{
     @Test
     @Tag("all-tests")
     @DisplayName("Проверка наличия вакансий IT и DGTL")
-    void checkCareerChapterTest(){
+    void checkCareerChapterTest() {
         mainPage.openPage()
                 .goToVacancy();
         vacancyPage.openItVacancy()
@@ -67,11 +66,22 @@ public class ProjectTests  extends TestBase{
     @Test
     @Tag("all-tests")
     @DisplayName("Поиск вакансии QA")
-    void searchQaVacancyTest(){
+    void searchQaVacancyTest() {
         mainPage.openPage()
                 .goToVacancy();
         vacancyPage.openVacancyPage()
                 .inputQAtoFilter()
                 .checkQaVacancy();
+    }
+
+    @Test
+    @Tag("all-tests")
+    @DisplayName("Проверка нотифкации при отсутсвии вакансии")
+    void checkNotificationTextTest() {
+        mainPage.openPage()
+                .goToVacancy();
+        vacancyPage.openVacancyPage()
+                .inputNotExistVac()
+                .checkNoVacancies();
     }
 }
