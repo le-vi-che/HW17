@@ -18,6 +18,8 @@ public class MainRaifPage {
     private ElementsCollection linkSearch = $("[data-marker='MobileApp.Box']").$$("[data-marker='MobileApp.Button']");
 
     private SelenideElement chatBut = $("[data-marker='Chat.Button']");
+
+   // miniBuiss
     private SelenideElement chatWindow = $("[data-testid='rchat-root-window']");
     private SelenideElement ipotekaButton = $("[data-marker='MainMenu.MainMenuWrapper']").$(byText("Ипотека"));
     private SelenideElement vtorichkaButton = $("[data-marker='MainMenu.div_3']").$(byText("Вторичный рынок"));
@@ -36,6 +38,13 @@ public class MainRaifPage {
         mainMenuCh.shouldHave(textsInAnyOrder(mainMenuChapters));
         return this;
     }
+
+   // @Step("Переходим в раздел Малому бизнесу")
+ //   public MainRaifPage openIpotekaChapter() {
+ //       miniBuiss.click();
+//        vtorichkaButton.click();
+  //      return this;
+  //  }
 
     @Step("Проверяем наличия ссылок на app Store")
     public MainRaifPage checkSocialsLinks() {

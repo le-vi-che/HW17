@@ -19,6 +19,7 @@ public class ProjectTests  extends TestBase{
 
     MainRaifPage mainPage  = new MainRaifPage();
     VacancyRaifPage vacancyPage = new VacancyRaifPage();
+
     @Test
     @Tag("all-tests")
     @DisplayName("Проверка разделов в меню")
