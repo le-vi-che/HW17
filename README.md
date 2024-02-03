@@ -92,7 +92,7 @@ main -DremoteUrl=${SELENOID_URL}
 
 ## <img src="media/allure.svg" title="Allure TestOps" width="4%"/> Пример Allure-отчета
 ### Overview
-В отчете отображены пройденные автотесты. На приложенном изображении открыт тестк кейс, отображены его шаги, прикреплены логи, скрины и видео
+В отчете отображены пройденные автотесты. На приложенном изображении открыт тест кейс, отображены его шаги, прикреплены логи, скрины и видео
 <p align="center">
 <img title="Allure Overview" src="media/allure-report.png">
 </p>
