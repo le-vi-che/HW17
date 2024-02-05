@@ -49,8 +49,15 @@ tasks.withType(Test) {
         }
     }
 }
-task all_tests(type: Test) {
+
+task raif_tests(type: Test) {
     useJUnitPlatform {
-        includeTags("all-tests")
+        includeTags("raif-tests")
+    }
+}
+
+task vacancy_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags("vacancy-tests")
     }
 }

@@ -25,7 +25,7 @@ public class ProjectTests  extends TestBase {
     VacancySearchPage vacancySearchPage = new VacancySearchPage();
 
     @Test
-    @Tag("all-tests")
+    @Tag("raif-tests")
     @DisplayName("Проверка разделов в меню")
     void checkMenuContentTest() {
         mainPage.openPage()
@@ -33,7 +33,7 @@ public class ProjectTests  extends TestBase {
     }
 
     @Test
-    @Tag("all-tests")
+    @Tag("raif-tests")
     @DisplayName("Проверка ссылок на app Store")
     void checkLinkToAppTest() {
         mainPage.openPage()
@@ -41,7 +41,7 @@ public class ProjectTests  extends TestBase {
     }
 
     @Test
-    @Tag("all-tests")
+    @Tag("raif-tests")
     @DisplayName("Проверка открытия чата")
     void checkOpenChatTest() {
         mainPage.openPage()
@@ -50,7 +50,7 @@ public class ProjectTests  extends TestBase {
     }
 
     @Test
-    @Tag("all-tests")
+    @Tag("raif-tests")
     @DisplayName("Проверка наличия кнопки Подать заявку в разделе Ипотека")
     void checkIpotekaButton() {
         mainPage.openPage()
@@ -59,7 +59,7 @@ public class ProjectTests  extends TestBase {
     }
 
     @Test
-    @Tag("all-tests")
+    @Tag("vacancy-tests")
     @DisplayName("Проверка наличия вакансий IT и DGTL")
     void checkCareerChapterTest() {
         mainPage.openPage()
@@ -70,7 +70,7 @@ public class ProjectTests  extends TestBase {
     }
 
     @Test
-    @Tag("all-tests")
+    @Tag("vacancy-tests")
     @DisplayName("Поиск вакансии QA")
     void searchQaVacancyTest() {
         mainPage.openPage()
@@ -83,7 +83,7 @@ public class ProjectTests  extends TestBase {
     }
 
     @Test
-    @Tag("all-tests")
+    @Tag("vacancy-tests")
     @DisplayName("Проверка нотифкации при отсутсвии вакансии")
     void checkNotificationTextTest() {
         mainPage.openPage()
