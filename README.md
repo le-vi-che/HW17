@@ -91,7 +91,6 @@ main -DremoteUrl=${SELENOID}
 </p>
 
 ## <img src="media/allure.svg" title="Allure TestOps" width="4%"/> Пример [Allure-отчета](https://jenkins.autotests.cloud/job/emonovaev_project/18/allure/)
-### Overview
 В отчете отображены пройденные автотесты. На приложенном изображении открыт тест кейс, отображены его шаги, прикреплены логи, скрины и видео
 <p align="center">
 <img title="Allure Overview" src="media/allure-report.png">
