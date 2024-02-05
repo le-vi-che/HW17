@@ -2,11 +2,13 @@ import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.MainRaifPage;
-import pages.VacancyRaifPage;
+import pages.*;
 
 import java.util.Arrays;
 import java.util.List;
+
+import static data.TestData.INVALID_VAC;
+import static data.TestData.VALID_VAC;
 
 @Owner("emonovaev")
 public class ProjectTests  extends TestBase {
@@ -15,7 +17,12 @@ public class ProjectTests  extends TestBase {
             "Инвестиции", "Страхование", "Переводы", "Сервисы", "Про Онлайн-банк", "Ещё...");
 
     MainRaifPage mainPage = new MainRaifPage();
-    VacancyRaifPage vacancyPage = new VacancyRaifPage();
+    IpotekaPage ipotekaPage = new IpotekaPage();
+    AboutPage aboutPage = new AboutPage();
+
+    ItDgtlVacancyPage itDgtlVacancyPage = new ItDgtlVacancyPage();
+    VacancyMainPage vacancyPage = new VacancyMainPage();
+    VacancySearchPage vacancySearchPage = new VacancySearchPage();
 
     @Test
     @Tag("all-tests")
@@ -23,7 +30,6 @@ public class ProjectTests  extends TestBase {
     void checkMenuContentTest() {
         mainPage.openPage()
                 .checkMainChapters(list);
-
     }
 
     @Test
@@ -33,7 +39,6 @@ public class ProjectTests  extends TestBase {
         mainPage.openPage()
                 .checkSocialsLinks();
     }
-
 
     @Test
     @Tag("all-tests")
@@ -49,8 +54,8 @@ public class ProjectTests  extends TestBase {
     @DisplayName("Проверка наличия кнопки Подать заявку в разделе Ипотека")
     void checkIpotekaButton() {
         mainPage.openPage()
-                .openIpotekaChapter()
-                .checkIpotekaButton();
+                .openIpotekaChapter();
+        ipotekaPage.checkIpotekaButton();
     }
 
     @Test
@@ -58,9 +63,10 @@ public class ProjectTests  extends TestBase {
     @DisplayName("Проверка наличия вакансий IT и DGTL")
     void checkCareerChapterTest() {
         mainPage.openPage()
-                .goToVacancy();
-        vacancyPage.openItVacancy()
-                .checkItVacancy();
+                .goToAbout();
+        aboutPage.goToCareer();
+        vacancyPage.openItVacancy();
+        itDgtlVacancyPage.checkItVacancy();
     }
 
     @Test
@@ -68,9 +74,11 @@ public class ProjectTests  extends TestBase {
     @DisplayName("Поиск вакансии QA")
     void searchQaVacancyTest() {
         mainPage.openPage()
-                .goToVacancy();
-        vacancyPage.openVacancyPage()
-                .inputQAtoFilter()
+                .goToAbout();
+        aboutPage.goToCareer();
+        vacancyPage.openVacancyPage();
+        vacancySearchPage.
+                inputVacToFilter(VALID_VAC)
                 .checkQaVacancy();
     }
 
@@ -79,9 +87,11 @@ public class ProjectTests  extends TestBase {
     @DisplayName("Проверка нотифкации при отсутсвии вакансии")
     void checkNotificationTextTest() {
         mainPage.openPage()
-                .goToVacancy();
-        vacancyPage.openVacancyPage()
-                .inputNotExistVac()
+                .goToAbout();
+        aboutPage.goToCareer();
+        vacancyPage.openVacancyPage();
+        vacancySearchPage
+                .inputVacToFilter(INVALID_VAC)
                 .checkNoVacancies();
     }
 }

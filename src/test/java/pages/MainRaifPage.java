@@ -23,9 +23,8 @@ public class MainRaifPage {
     private SelenideElement chatWindow = $("[data-testid='rchat-root-window']");
     private SelenideElement ipotekaButton = $("[data-marker='MainMenu.MainMenuWrapper']").$(byText("Ипотека"));
     private SelenideElement vtorichkaButton = $("[data-marker='MainMenu.div_3']").$(byText("Вторичный рынок"));
-    private SelenideElement applyButton = $("[data-marker='Product.Button']");
+
     private SelenideElement aboutButton = $("[data-marker='LinkList.LinkListNav']").$(byText("О банке"));
-    private SelenideElement vacancyPageGoButton = $("[data-marker='StoryIconBlockItem.Grid.Col']", 1);
 
     @Step("Открываем главную страницу")
     public MainRaifPage openPage() {
@@ -33,7 +32,7 @@ public class MainRaifPage {
         return this;
     }
 
-    @Step("Открываем главную страницу")
+    @Step("Проверяем наличие разделов")
     public MainRaifPage checkMainChapters(List<String> mainMenuChapters) {
         mainMenuCh.shouldHave(textsInAnyOrder(mainMenuChapters));
         return this;
@@ -64,16 +63,9 @@ public class MainRaifPage {
         return this;
     }
 
-    @Step("Проверяем, что доступна кнопка Подать заявку")
-    public MainRaifPage checkIpotekaButton() {
-        applyButton.shouldBe(visible);
-        return this;
-    }
-
-    @Step("Переходим в раздел всх вакансий")
-    public MainRaifPage goToVacancy() {
+    @Step("Переходим в Обанке")
+    public MainRaifPage goToAbout() {
         aboutButton.click();
-        vacancyPageGoButton.click();
         return this;
     }
 }
