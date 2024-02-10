@@ -114,7 +114,7 @@ main -DremoteUrl=${SELENOID}
 <img title="Jira Task" src="media/jiraTask.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/telegram.svg"> Уведомления в Telegram с использованием бота
+## <img width="40%" style="vertical-align:middle" title="Telegram" src="media/telegram.svg"> Уведомления в Telegram с использованием бота
 
 После завершения сборки, бот созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
 
@@ -122,6 +122,7 @@ main -DremoteUrl=${SELENOID}
 <img title="Telegram Notifications" src="media/telegramBot.png">
 </p>
 
+<a id="#-видео-примера-запуска-теста-в-selenoid"></a>
 ## Видео примера запуска тестов в Selenoid
 
 К каждому тесту в отчете прилагается видео прогона.
