@@ -15,15 +15,13 @@
 <p align="center">
 <a href="https://www.java.com/"><img src="/media/java.svg" width="70" height="70"  alt="Java"/></a>
 <a href="https://www.jetbrains.com/idea/"><img src="media/IJ.svg" width="70" height="70"  alt="IDEA"/></a>
-<a href="https://www.selenide.org/"><img src="media/Selenide.svg" width="70" height="70" alt="Selenide" title="Selenide"/></a> 
-<a href="https://aerokube.com/selenoid/"><img src="media/Selenoid.svg" width="70" height="70"  alt="Selenoid"/></a>
+<a href="https://www.selenide.org/"><img src="media/selenide.svg" width="70" height="70" alt="Selenide" title="Selenide"/></a> 
+<a href="https://aerokube.com/selenoid/"><img src="media/selenoid.svg" width="70" height="70"  alt="Selenoid"/></a>
 <a href="https://github.com/allure-framework"><img src="media/allure.svg" width="70" height="70"  alt="Allure"/></a>
 <a href="https://gradle.org/"><img src="media/gradle.svg" width="70" height="70"  alt="Gradle"/></a>
 <a href="https://junit.org/junit5/"><img src="media/jUnit5.svg" width="70" height="70"  alt="JUnit 5"/></a>
 <a href="https://www.jenkins.io/"><img src="media/jenkins.svg" width="70" height="70"  alt="Jenkins"/></a>
 <a href="https://www.atlassian.com/software/jira/"><img src="media/Jira.svg" width="70" height="70" alt="Jira" title="Jira"/></a> 
-<a href="https://appium.io/docs/en/latest/"><img src="media/appium.svg" width="70" height="70" alt="Appium" title="Appium"/></a> 
-<a href="https://www.browserstack.com/"><img src="media/Browserstack.svg" width="70" height="70" alt="BrowserStack" title="BrowserStack"/></a> 
 <a href="https://github.com/"><img src="media/gitHub.svg" width="70" height="70"  alt="GitHub"/></a>
 <a href="https://web.telegram.org/"><img src="media/telegram.svg" width="70" height="70"  alt="Telegram"/></a>
 </p>
