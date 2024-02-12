@@ -12,7 +12,7 @@ public class VacancySearchPage {
 
     private SelenideElement searchField = $("[placeholder='Поиcк']");
     private  SelenideElement resultField =  $("[target='_blank']");
-    private SelenideElement noVacancies =  $(".ProjectTests");
+    private SelenideElement noVacancies =  $(".root-0-2-158");
 
     @Step("Вводим параметры поиска")
     public VacancySearchPage inputVacToFilter(String testData) {
