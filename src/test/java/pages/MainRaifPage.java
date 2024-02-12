@@ -1,5 +1,6 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
@@ -19,8 +20,10 @@ public class MainRaifPage {
 
     private SelenideElement chatBut = $("[data-marker='Chat.Button']");
 
-   // miniBuiss
-    private SelenideElement chatWindow = $("[data-testid='rchat-root-window']");
+    private SelenideElement chatWindow = $("[data-testid='rchat-selectable-skill-7']");
+    private SelenideElement startBt =  $("[data-testid='rchat-form-start-chat-button']");
+    private SelenideElement checkField =$("[data-testid='rchat-form-name-input']");
+
     private SelenideElement ipotekaButton = $("[data-marker='MainMenu.MainMenuWrapper']").$(byText("Ипотека"));
     private SelenideElement vtorichkaButton = $("[data-marker='MainMenu.div_3']").$(byText("Вторичный рынок"));
 
@@ -50,11 +53,25 @@ public class MainRaifPage {
              return this;
 }
 
-    @Step("Проверяем, что чат открылся")
-    public MainRaifPage checkChat() {
-        chatWindow.should(appear);
+    @Step("Выбираем Чат для меня")
+    public MainRaifPage chooseChat() {
+        chatWindow.click();
                 return this;
 }
+
+
+    @Step("Нажимаем кнопку Начать чат, без заполнения полей")
+    public MainRaifPage startChatButton() {
+        startBt.click();
+        return this;
+    }
+
+    @Step("Проверяем, что обязательные незаполненые поля подсвечены")
+    public MainRaifPage checkLightField() {
+        checkField.shouldHave(Condition.cssValue("border-bottom-color", "rgba(238, 80, 90, 1)"));;
+        return this;
+    }
+
 
     @Step("Переходим в раздел Вторичная ипотека")
     public MainRaifPage openIpotekaChapter() {

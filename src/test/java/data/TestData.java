@@ -1,5 +1,7 @@
 package data;
 
+import com.codeborne.selenide.Condition;
+
 public class TestData {
 
     public static final String VALID_VAC = "QA",

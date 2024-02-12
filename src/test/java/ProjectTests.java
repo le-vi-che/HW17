@@ -42,11 +42,13 @@ public class ProjectTests  extends TestBase {
 
     @Test
     @Tag("raif-tests")
-    @DisplayName("Проверка открытия чата")
+    @DisplayName("Проверка подсвечивания незаполненных полей в онлайн чате")
     void checkOpenChatTest() {
         mainPage.openPage()
                 .openChat()
-                .checkChat();
+                .chooseChat()
+                .startChatButton()
+                .checkLightField();
     }
 
     @Test
