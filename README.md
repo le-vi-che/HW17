@@ -129,3 +129,6 @@ main -DremoteUrl=${SELENOID}
   <img title="Selenoid Video" src="video/videoTest.gif" width="700">
 </p>
 
+<p align="center">
+  <img title="Selenoid Video" src="media/video.gif" width="700">
+</p>
