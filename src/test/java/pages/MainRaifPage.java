@@ -8,7 +8,6 @@ import io.qameta.allure.Step;
 import java.util.List;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.CollectionCondition.*;
