@@ -1,4 +1,5 @@
 import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -8,6 +9,8 @@ import java.util.Arrays;
 import java.util.List;
 
 @Owner("emonovaev")
+@Story("Main page tests")
+@Tag("raif-tests")
 public class ProjectTests  extends TestBase {
 
     final List<String> list = Arrays.asList("Кредиты", "Ипотека", "Карты", "Сбережения",
@@ -17,7 +20,6 @@ public class ProjectTests  extends TestBase {
     IpotekaPage ipotekaPage = new IpotekaPage();
 
     @Test
-    @Tag("raif-tests")
     @DisplayName("Проверка разделов в меню")
     void checkMenuContentTest() {
         mainPage.openPage()
@@ -25,7 +27,6 @@ public class ProjectTests  extends TestBase {
     }
 
     @Test
-    @Tag("raif-tests")
     @DisplayName("Проверка ссылок на app Store")
     void checkLinkToAppTest() {
         mainPage.openPage()
@@ -33,7 +34,6 @@ public class ProjectTests  extends TestBase {
     }
 
     @Test
-    @Tag("raif-tests")
     @DisplayName("Проверка подсвечивания незаполненных полей в онлайн чате")
     void checkOpenChatTest() {
         mainPage.openPage()
@@ -44,7 +44,6 @@ public class ProjectTests  extends TestBase {
     }
 
     @Test
-    @Tag("raif-tests")
     @DisplayName("Проверка наличия кнопки Подать заявку в разделе Ипотека")
     void checkIpotekaButton() {
         mainPage.openPage()
