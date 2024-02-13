@@ -10,8 +10,14 @@ import pages.*;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
+import static io.qameta.allure.Allure.step;
+
 @Owner("emonovaev")
-@Story("Main page tests")
+@Story("raifaizen tests")
 @Tag("raif-tests")
 public class ProjectTests  extends TestBase {
 
@@ -20,6 +26,8 @@ public class ProjectTests  extends TestBase {
 
     MainRaifPage mainPage = new MainRaifPage();
     IpotekaPage ipotekaPage = new IpotekaPage();
+    OfficePage officePage = new OfficePage();
+    FirstOfficePage firstOfficePage = new FirstOfficePage();
 
     @Test
     @DisplayName("Проверка разделов в меню")
@@ -29,10 +37,14 @@ public class ProjectTests  extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка ссылок на app Store")
-    void checkLinkToAppTest() {
+    @DisplayName("Открытие первого офиса из списка")
+    void checkFirstOfficeTest() {
         mainPage.openPage()
-                .checkSocialsLinks();
+                .openOfficePage();
+        officePage.chooseCity()
+                  .listCitySearch()
+                  .firstOfficeOpen();
+        firstOfficePage.checkNameOffice();
     }
 
     @Test

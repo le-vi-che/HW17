@@ -15,10 +15,8 @@ import static com.codeborne.selenide.CollectionCondition.*;
 public class MainRaifPage {
 
     private ElementsCollection mainMenuCh = $("[data-marker='MainMenu.MainMenuWrapper']").$$("a");
-    private ElementsCollection linkSearch = $("[data-marker='MobileApp.Box']").$$("[data-marker='MobileApp.Button']");
-
+    private SelenideElement officePage = $("[data-marker='MenuItem.Link']", 8);
     private SelenideElement chatBut = $("[data-marker='Chat.Button']");
-
     private SelenideElement chatWindow = $("[data-testid='rchat-selectable-skill-7']");
     private SelenideElement startBt =  $("[data-testid='rchat-form-start-chat-button']");
     private SelenideElement checkField =$("[data-testid='rchat-form-name-input']");
@@ -41,22 +39,22 @@ public class MainRaifPage {
     }
 
     @Step("Проверяем наличия ссылок на app Store")
-    public MainRaifPage checkSocialsLinks() {
-        linkSearch.shouldHave(size(3));
+    public MainRaifPage openOfficePage() {
+        officePage.click();
             return this;
-}
+    }
 
     @Step("Нажимаем кнопку чат")
     public MainRaifPage openChat() {
         chatBut.click();
              return this;
-}
+    }
 
     @Step("Выбираем Чат для меня")
     public MainRaifPage chooseChat() {
         chatWindow.click();
                 return this;
-}
+    }
 
 
     @Step("Нажимаем кнопку Начать чат, без заполнения полей")
