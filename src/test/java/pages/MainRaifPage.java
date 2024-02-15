@@ -20,9 +20,9 @@ public class MainRaifPage {
     private SelenideElement chatWindow = $("[data-testid='rchat-selectable-skill-7']");
     private SelenideElement startBt =  $("[data-testid='rchat-form-start-chat-button']");
     private SelenideElement checkField =$("[data-testid='rchat-form-name-input']");
-
-    private SelenideElement ipotekaButton = $("[data-marker='MainMenu.MainMenuWrapper']").$(byText("Ипотека"));
-    private SelenideElement vtorichkaButton = $("[data-marker='MainMenu.div_3']").$(byText("Вторичный рынок"));
+    private SelenideElement goToRealEstate =$("[data-marker='LinkList.div_0']");
+    private SelenideElement insurancesButton = $("[data-marker='MainMenu.MainMenuWrapper']").$(byText("Страхование"));
+    private SelenideElement insurancesCreditButton = $("[data-marker='MainMenu.div_3']").$(byText("Заемщикам кредитов"));
 
     private SelenideElement aboutButton = $("[data-marker='LinkList.LinkListNav']").$(byText("О банке"));
 
@@ -69,11 +69,18 @@ public class MainRaifPage {
         return this;
     }
 
+    @Step("Перходим в раздел Продажа и аренда недвижимости банка")
+    public MainRaifPage goToSellChapter() {
+        goToRealEstate.$(byText("Продажа и аренда недвижимости банка")).click();
+        return this;
+    }
 
-    @Step("Переходим в раздел Вторичная ипотека")
-    public MainRaifPage openIpotekaChapter() {
-        ipotekaButton.click();
-        vtorichkaButton.click();
+
+
+    @Step("Переходим в раздел Страхоние для заемщиков кредитов")
+    public MainRaifPage openInsurancesChapter() {
+        insurancesButton.click();
+        insurancesCreditButton.click();
         return this;
     }
 

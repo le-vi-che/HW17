@@ -7,27 +7,26 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.*;
 
-import java.util.Arrays;
-import java.util.List;
+import static data.TestData.MAIN_MENU_LIST;
 
 @Owner("emonovaev")
 @Story("raifaizen tests")
 @Tag("raif-tests")
 public class ProjectTests  extends TestBase {
 
-    final List<String> list = Arrays.asList("Кредиты", "Ипотека", "Карты", "Сбережения",
-            "Инвестиции", "Страхование", "Переводы", "Сервисы", "Про Онлайн-банк", "Ещё...");
-
     MainRaifPage mainPage = new MainRaifPage();
-    IpotekaPage ipotekaPage = new IpotekaPage();
+    InsurancesPage insurancesPage = new InsurancesPage();
+    IpotekaInsurancesPage ipotekaInsurancesPage = new IpotekaInsurancesPage();
     OfficePage officePage = new OfficePage();
     FirstOfficePage firstOfficePage = new FirstOfficePage();
+    SellRentPage sellRentPage = new SellRentPage();
+
 
     @Test
     @DisplayName("Проверка разделов в меню")
     void checkMenuContentTest() {
         mainPage.openPage()
-                .checkMainChapters(list);
+                .checkMainChapters(MAIN_MENU_LIST);
     }
 
     @Test
@@ -52,10 +51,21 @@ public class ProjectTests  extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка наличия кнопки Подать заявку в разделе Ипотека")
-    void checkIpotekaButton() {
+    @DisplayName("Проверка наличия объектов к аренде")
+    void checkRentBanksOffice() {
         mainPage.openPage()
-                .openIpotekaChapter();
-        ipotekaPage.checkIpotekaButton();
+                .goToSellChapter();
+        sellRentPage.goToRentChapter()
+                .checkRentObject();
+    }
+
+    @Test
+    @DisplayName("Проверяем наличия списка страховых компаний")
+    void checkListOfInsurances (){
+        mainPage.openPage()
+                .openInsurancesChapter();
+        insurancesPage.ipotekaInsurancesClick();
+        ipotekaInsurancesPage.openCompanyList()
+                .checkCompanyInsurancesList();
     }
 }
