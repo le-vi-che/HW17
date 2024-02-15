@@ -60,7 +60,7 @@ public class ProjectTests  extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверяем наличия списка страховых компаний")
+    @DisplayName("Проверка наличия списка страховых компаний")
     void checkListOfInsurances (){
         mainPage.openPage()
                 .openInsurancesChapter();
