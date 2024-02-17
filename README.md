@@ -76,7 +76,7 @@ main -DremoteUrl=${SELENOID}
 -Dbrowser=${BROWSER}
 -Dbrowser_version="${VERSION}"
 ```
-## <img src="media/jenkins.svg" title="Allure TestOps" width="4%"/> Созданный проект в [Jenkins](https://jenkins.autotests.cloud/job/emonovaev_project/)
+## <img src="media/logo/jenkins.svg" title="Allure TestOps" width="4%"/> Созданный проект в [Jenkins](https://jenkins.autotests.cloud/job/emonovaev_project/)
 <p align="center">
 <img title="allure-report" src="media/screen/JenkinsProject.png">
 </p>
@@ -89,12 +89,12 @@ main -DremoteUrl=${SELENOID}
 * <code>VERSION</code> – версия браузера, в которой будут выполняться тесты. По умолчанию - <code>100.0</code>.
 * <code>SELENOID</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 
-## <img src="media/jenkins.svg" title="Jenkins" width="4%"/> Страница запуска в Jenkins
+## <img src="media/logo/jenkins.svg" title="Jenkins" width="4%"/> Страница запуска в Jenkins
 <p align="center">
 <img title="allure-report" src="media/screen/JenkinsJoba.png">
 </p>
 
-## <img src="media/allure.svg" title="Allure TestOps" width="4%"/> Пример [Allure-отчета](https://jenkins.autotests.cloud/job/emonovaev_project/18/allure/)
+## <img src="media/logo/allure.svg" title="Allure TestOps" width="4%"/> Пример [Allure-отчета](https://jenkins.autotests.cloud/job/emonovaev_project/18/allure/)
 В отчете отображены пройденные автотесты. На приложенном изображении открыт тест кейс, отображены его шаги, прикреплены логи, скрины и видео
 <p align="center">
 <img title="Allure Overview" src="media/screen/allure-report.png">
@@ -110,7 +110,7 @@ main -DremoteUrl=${SELENOID}
 <img title="Allure TestOps DashBoard" src="media/screen/allureTestOps.png">
 </p>
 
-## <img src="media/Jira.svg" title="Allure TestOps" width="4%"/> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1094)
+## <img src="media/logo/Jira.svg" title="Allure TestOps" width="4%"/> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1094)
 
 Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>, в тикете отображается информация, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
 
@@ -118,7 +118,7 @@ main -DremoteUrl=${SELENOID}
 <img title="Jira Task" src="media/screen/jiraTask.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/telegram.svg"> Уведомления в Telegram с использованием бота
+## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/telegram.svg"> Уведомления в Telegram с использованием бота
 
 После завершения сборки, бот созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
 
